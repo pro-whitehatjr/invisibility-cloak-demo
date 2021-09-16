@@ -1,6 +1,7 @@
 from flask import Flask, render_template, Response
 import cv2
 import numpy as np
+import time
 
 app = Flask(__name__)
 
@@ -15,7 +16,7 @@ def gen_frames():
     #Allowing the webcam to start by making the code sleep for 2 seconds
 
     bg = 0
-
+    time.sleep(5)
     #Capturing background for 60 frames
     for i in range(60):
         ret, bg = cap.read()
