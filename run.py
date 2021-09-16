@@ -5,15 +5,13 @@ import time
 
 app = Flask(__name__)
 
-#Starting the webcam
-cap = cv2.VideoCapture(0)
-
 @app.route('/')
 def index():
     return render_template('index.html')
 
 def gen_frames():
     #Allowing the webcam to start by making the code sleep for 2 seconds
+    cap = cv2.VideoCapture(0)
 
     bg = 0
     time.sleep(5)
