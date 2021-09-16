@@ -11,10 +11,12 @@ def index():
 
 def gen_frames():
     #Allowing the webcam to start by making the code sleep for 2 seconds
-    cap = cv2.VideoCapture(0)
 
     bg = 0
     time.sleep(5)
+
+    cap = cv2.VideoCapture(0)
+    
     #Capturing background for 60 frames
     for i in range(60):
         ret, bg = cap.read()
